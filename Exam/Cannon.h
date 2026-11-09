@@ -9,7 +9,7 @@ private:
 public:
     Cannon(int power);
 
-    int damage()
+    int damage() override
     {
 		return power;
     }

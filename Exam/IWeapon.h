@@ -2,6 +2,6 @@
 class IWeapon
 {
 public:
-	int damage();
+	virtual int damage() =0;
 };
 

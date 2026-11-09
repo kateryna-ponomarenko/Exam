@@ -1,9 +1,9 @@
 #pragma once
 #include <iostream>
 
- class Enemy
+ static class Enemy
 {
-private:
+protected:
 	std::string name;
 	int hp;
 
@@ -20,8 +20,15 @@ public:
 		return hp > 0;
 	}
 
-	void takeHit() 
+	virtual void takeHit(int damage) 
 	{
+		Enemy::hp -= damage;
+		if (Enemy::hp < 0)
+		{
+			Enemy::hp = 0;
+		}
+
+		std::cout << "hp: " << hp << std::endl;
 	}
 
 };
