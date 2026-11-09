@@ -37,7 +37,7 @@ public:
 
 	int aliveCount()
 	{
-
+		//enemys.count()
 	}
 };
 
