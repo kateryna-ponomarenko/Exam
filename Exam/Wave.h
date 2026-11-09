@@ -3,11 +3,12 @@
 #include "Ghost.h"
 #include "Enemy.h"
 #include <vector>
+
 class Wave
 {
 private:
 	
-	//vector<unique_ptr<Enemy>> enemys;
+	vector<std::unique_ptr<Enemy>> enemys;
 public:
 
 	
@@ -27,17 +28,26 @@ public:
 	{
 		while (aliveCount() > 0)
 		{
-			//for (enemy in enemys)
-			//{
-			//	Enemy::takeHit(damage);
-			//}
+			for (enemy in enemys)
+			{
+				if (enemy.IsAlife())
+				{
+					Enemy::takeHit(damage);
+				}
+
+				else
+				{
+					std::cout << "dead " << name << std::endl;
+				}
+				
+			}
 		}
 		
 	}
 
 	int aliveCount()
 	{
-		//enemys.count()
+		enemys.count()
 	}
 };
 
