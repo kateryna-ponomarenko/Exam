@@ -139,7 +139,23 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Cannon.cpp" />
+    <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Exam.cpp" />
+    <ClCompile Include="Ghost.cpp" />
+    <ClCompile Include="IWeapon.cpp" />
+    <ClCompile Include="Orc.cpp" />
+    <ClCompile Include="Tower.cpp" />
+    <ClCompile Include="Wave.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Cannon.h" />
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="Ghost.h" />
+    <ClInclude Include="IWeapon.h" />
+    <ClInclude Include="Orc.h" />
+    <ClInclude Include="Tower.h" />
+    <ClInclude Include="Wave.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
